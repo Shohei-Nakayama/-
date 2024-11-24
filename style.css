@@ -19,14 +19,134 @@
     visibility: hidden;
 }
 
-/* コンテンツ部分 */
-.gallery {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+/* コンテンツ */
+
+
+*{
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
 }
-img {
+
+hr{
+    border: none;
+    height: 2px;
+    background:linear-gradient(90deg, rgba(37,180,10,0.1)0%,rgb(104, 210, 255)50%,rgba(255, 227, 46, 0.1)100%);
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
+    color: rgb(86, 85, 85);
+}
+    
+
+.container{
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+            font-size: 70px;
+            background: linear-gradient(transparent 70% , #87cefa 30%);
+            border-radius:90%;
+            color:lightsteelblue;
+            animation: fadeInBox 2s linear;
+        }
+        
+        @keyframes fadeInBox
+        {0%
+            {
+                opacity: 0;
+            }
+         100%
+            {
+                opacity: 1;
+            }
+        }
+
+
+
+@media screen and (max-width:600px){
+        .title{
+                    font-size: 40px;
+                    background: linear-gradient(transparent 70% , #87cefa 30%);
+                    border-radius:90%;
+                    color:lightsteelblue;
+                    animation: fadeInBox 2s linear;
+               }
+                
+        @keyframes fadeInBox
+                {
+                    0%{
+                        opacity: 0;
+                      }
+                    100%{
+                        opacity: 1;
+                        }
+                }
+    }
+        
+
+nav{
+    text-align:center;
+}
+
+nav ul{
+	margin:0;
+    padding:0;
+}
+
+
+nav ul li{
+    display: inline;
+    justify-content: center;
+    margin:10px;
+    width:100%;
+}
+
+@media screen and (max-width:600px) {
+    nav ul li
+        {
+            display: inline;
+            justify-content: center;
+            margin:1%;
+            width:100%;
+    }
+    
+
+    nav ul li a{
+        text-decoration: none;
+        color:rgb(104, 104, 104);
+    }
+
+    nav li:hover{
+        border-bottom:2px solid #ffff00;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    img{
+        border-radius: 4px;
+        max-width: 100%;
+    }
+
+
+
 }
